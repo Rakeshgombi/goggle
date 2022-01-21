@@ -7,15 +7,18 @@ export const Routes = () => (
   <div className="p-4">
     <Switch>
       <Route exact path="/">
-        <Redirect to="/search" />
+        <Redirect to="/goggle/search" />
       </Route>
-      <Route exact path="/search">
+      <Route exact path="/goggle">
+        <Redirect to="/goggle/search" />
+      </Route>
+      <Route exact path="/goggle/search">
         <Results />
       </Route>
-      <Route path="/images">
+      <Route path="/goggle/images">
         <Results />
       </Route>
-      <Route path="/news">
+      <Route path="/goggle/news">
         <Results />
       </Route>
       <Route path="/videos">

@@ -13,7 +13,7 @@ export const Results = () => {
       if (location.pathname === '/videos') {
         getResults(`/search/q=${searchTerm} videos`);
       } else {
-        getResults(`${location.pathname}/q=${searchTerm}&num=40`);
+        getResults(`${location.pathname.slice(7, )}/q=${searchTerm}&num=40`);
       }
     }
   }, [searchTerm, location.pathname]);
@@ -22,7 +22,8 @@ export const Results = () => {
   console.log(location.pathname);
 
   switch (location.pathname) {
-    case '/search':
+    case '/goggle/search':
+      {console.log(location.pathname.slice(7, ))}
       return (
         <div className="md:px-24 lg:pr-72 md:pr-48 flex flex-wrap justify-between items-start">
           {results?.map(({ link, title, description }, index) => (
@@ -40,7 +41,7 @@ export const Results = () => {
           ))}
         </div>
       );
-    case '/images':
+    case '/goggle/images':
       return (
         <div className="flex flex-wrap justify-center items-start">
           {results?.map(({ image, link: { href, title } }, index) => (
@@ -53,7 +54,7 @@ export const Results = () => {
           ))}
         </div>
       )
-    case '/news':
+    case '/goggle/news':
       return (
         <div className="sm:px-56 flex flex-wrap justify-between items-start">
           {results?.map(({ links, id, source, title }) => (
@@ -72,7 +73,7 @@ export const Results = () => {
           ))}
         </div>
       );
-    case '/videos':
+    case '/goggle/videos':
       return (
         <div className="flex flex-wrap justify-center">
           {results.map((video, index) => (
