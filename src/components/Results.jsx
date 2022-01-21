@@ -10,10 +10,10 @@ export const Results = () => {
 
   useEffect(() => {
     if (searchTerm !== '') {
-      if (location.pathname === '/videos') {
+      if (location.pathname === '/goggle/videos') {
         getResults(`/search/q=${searchTerm} videos`);
       } else {
-        getResults(`${location.pathname.slice(7, )}/q=${searchTerm}&num=40`);
+        getResults(`${location.pathname.slice(7,)}/q=${searchTerm}&num=40`);
       }
     }
   }, [searchTerm, location.pathname]);
@@ -23,7 +23,7 @@ export const Results = () => {
 
   switch (location.pathname) {
     case '/goggle/search':
-      {console.log(location.pathname.slice(7, ))}
+      { console.log(location.pathname.slice(7,)) }
       return (
         <div className="md:px-24 lg:pr-72 md:pr-48 flex flex-wrap justify-between items-start">
           {results?.map(({ link, title, description }, index) => (
@@ -78,8 +78,7 @@ export const Results = () => {
         <div className="flex flex-wrap justify-center">
           {results.map((video, index) => (
             <div className="p-2" key={index}>
-              {console.log(video)}
-              <ReactPlayer url={video.additional_links?.[0].href} controls width="355px" height="200" />
+              <ReactPlayer url={video.additional_links?.[0]?.href} controls width="355px" height="200" />
             </div>
           ))}
         </div>
