@@ -12,6 +12,9 @@ export const Routes = () => (
       <Route exact path="/goggle">
         <Redirect to="/goggle/search" />
       </Route>
+      <Route exact path="/search">
+        <Redirect to="/goggle/search" />
+      </Route>
       <Route exact path="/goggle/search">
         <Results />
       </Route>
@@ -21,7 +24,7 @@ export const Routes = () => (
       <Route path="/goggle/news">
         <Results />
       </Route>
-      <Route path="/videos">
+      <Route path="/goggle/videos">
         <Results />
       </Route>
 
