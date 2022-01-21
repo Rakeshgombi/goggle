@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/goggle/static/css/main.62285c10.css",
+    "main.js": "/goggle/static/js/main.29a42002.js",
+    "index.html": "/goggle/index.html",
+    "main.62285c10.css.map": "/goggle/static/css/main.62285c10.css.map",
+    "main.29a42002.js.map": "/goggle/static/js/main.29a42002.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62285c10.css",
+    "static/js/main.29a42002.js"
+  ]
+}
